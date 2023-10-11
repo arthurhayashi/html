@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Ascenda a Lâmpada</h1>
+    <img id="led" src="_images/ledA.jpeg" onmousemove="mudaLampada(1)" onmouseleave="mudaLampada(2)" onclick="mudaLampada(3)" alt="">
+</body>
+<script>
+    var amongus= false;
+    function mudaLampada(tipo){
+        if(tipo == 1 ){
+            arquivo = "_images/ledOn.jpeg";
+        }else if(tipo==2 ){
+            arquivo = "_images/ledA.jpeg";
+        }else if(tipo==3){
+            arquivo ="_images/amongus.png";
+           
+        }if(!amongus){
+            document.getElementById("led").src = arquivo;
+            console.log(amongus)
+            if(tipo==3){
+                amongus=true;
+            }
+        }
+
+    }
+
+</script>
+</html>
